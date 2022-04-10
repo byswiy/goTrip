@@ -20,7 +20,7 @@ public class GoTrip {
 		System.out.println("===== ===== ===== ===== =====");
 	}
 	
-	public void printline() {
+	public static void printline() {
 		System.out.println("------- -------- ------- ------- ------");
 	}
 	
@@ -31,9 +31,9 @@ public class GoTrip {
 			System.out.println(wantRegion.getRegion());
 		}
 	} 
+	
+	
 	public static void main(String[] args) {
-		
-		GoTrip line = new GoTrip();
 		Money money = new Money();
 		
 		
@@ -56,7 +56,7 @@ public class GoTrip {
 			// 해당하는 금액에 따라 여행지를 추천해준다
 			if(num == 1) {
 				
-			line.printline();
+			GoTrip.printline();
 			
 			// 반복문을 사용해서 금액이 맞지 않을 때 다시 재입력 할 수 있게 한다
 			while(true) {
@@ -122,18 +122,18 @@ public class GoTrip {
 				fifthRegion.add("광주 -> 펭귄마을, 국립광주과학관, 국립광주박물관");
 					
 					
-				line.printline();
+				GoTrip.printline();
 				System.out.println("1. 경기도 | 인천 | 서울");
 				System.out.println("2. 충청도 | 세종 | 대전");
 				System.out.println("3. 강원도");
 				System.out.println("4. 전라도 | 광주");
 				System.out.println("5. 경상도 | 대구 | 울산 | 부산");
 				
-				line.printline();
+				GoTrip.printline();
 					
 				System.out.print("알고싶은 지역의 번호 선택해주세요 -> ");
 				int number = scanf.nextInt();
-				line.printline();
+				GoTrip.printline();
 					
 			switch(number) {
 				case 5:
@@ -211,13 +211,13 @@ public class GoTrip {
 				recommendRegion.add(region9);
 				recommendRegion.add(region10);
 				
-				line.printline();
+				GoTrip.printline();
 				System.out.println("<< 추천 top 10 >>");
 				
 				for(int i=0; i<recommendRegion.size(); i++) {
 					System.out.println("•" + recommendRegion.get(i));
 				}
-				line.printline();
+				GoTrip.printline();
 		}
 			break;
 		// 인기있는 10군데 지역 추천 종료
@@ -229,7 +229,7 @@ public class GoTrip {
 				System.out.print("12개 지역 중 하나를 입력해주세요! -> ");
 				String wantRegion = scanf.next();
 				
-				line.printline();
+				GoTrip.printline();
 				
 				SearchRegion wantR1 = new SearchRegion("강원도");
 				SearchRegion wantR2 = new SearchRegion("경기도");
@@ -267,51 +267,51 @@ public class GoTrip {
 
 					if(name.equals("강원도") && wantRegion.equals("강원도")) {
 						System.out.println("동해, 평창, 강릉, 속초, 영주, 봉화");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("경기도") && wantRegion.equals("경기도")) {
 						System.out.println("수원, 시흥, 안성, 용인, 파주, 가평, 포천, 과천, 화성, 평택");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("인천") && wantRegion.equals("인천")) {
 						System.out.println("중구, 서구, 계양, 부평, 남동, 동구, 연수");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("서울") && wantRegion.equals("서울")) {
 						System.out.println("강동, 관악, 동대문, 강남, 영등포, 용산, 종로, 마포, 서초, 강북");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("충청도") && wantRegion.equals("충청도")) {
 						System.out.println("단양, 영월, 충주, 청주, 보령, 논산, 서산, 태안, 당진");
-						line.printline();
+						GoTrip.printline();
 						break;
 					}  else if(name.equals("대전") && wantRegion.equals("대전")) {
 						System.out.println("동구, 중구, 유성구, 대덕구, 서구");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("경상도") && wantRegion.equals("경상도")) {
 						System.out.println("안동, 영주, 경주, 통영, 거제, 하동, 창원, 남해, 사천, 진주");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("대구") && wantRegion.equals("대구")) {
 						System.out.println("동구, 남구, 수성구, 중구, 달성군, 달서구");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("울산") && wantRegion.equals("울산")) {
 						System.out.println("남구, 북구, 울주군, 중구, 동구");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("부산") && wantRegion.equals("부산")) {
 						System.out.println("해운대, 부산진, 강서, 사상, 동래구, 중구, 남구");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("전라도") && wantRegion.equals("전라도")) {
 						System.out.println("전주, 군산, 무주, 목포, 여수, 보성, 해남, 담양, 순천, 고창");
-						line.printline();
+						GoTrip.printline();
 						break;
 					} else if(name.equals("광주") && wantRegion.equals("광주")) {
 						System.out.println("광산구, 서구, 동구, 북구, 남구");
-						line.printline();
+						GoTrip.printline();
 						break;
 					}
 					
@@ -334,13 +334,13 @@ public class GoTrip {
 			if(num == 6) {
 				Season ss = new Season();
 				
-				line.printline();
+				GoTrip.printline();
 
 				System.out.println("계절별 추천 여행지");
 				System.out.print("계절 : ");
 				String season = scanf.next();
 				
-				line.printline();
+				GoTrip.printline();
 				
 				System.out.println("<< " + season + " 추천 여행지 >>");
 				
