@@ -108,7 +108,6 @@ public class GoTrip {
 				firstRegion.add("인천 -> 을왕리 해수욕장, 송도 센트럴파크, 인천 대공원");
 				firstRegion.add("서울 -> 복촌 한옥마을, 올림픽 공원, 낙산공원");
 					
-					
 				ArrayList<String> secondRegion = new ArrayList<>();
 				secondRegion.add("충청도 -> 꽂지 해수욕장, 남당항, 아산지중해");
 				secondRegion.add("세종 -> 세종 호수공원, 국립세종수목원, 베어트리파크");
@@ -126,9 +125,9 @@ public class GoTrip {
 				ArrayList<String> fifthRegion = new ArrayList<>();
 				fifthRegion.add("전라도 -> 순천만 국가공원, 낙안읍성민속마을, 대흥사");
 				fifthRegion.add("광주 -> 펭귄마을, 국립광주과학관, 국립광주박물관");
-					
-					
+				
 				GoTrip.printline();
+				
 				System.out.println("1. 경기도 | 인천 | 서울");
 				System.out.println("2. 충청도 | 세종 | 대전");
 				System.out.println("3. 강원도");
@@ -139,26 +138,21 @@ public class GoTrip {
 					
 				System.out.print("알고싶은 지역의 번호 선택해주세요 -> ");
 				int number = scanf.nextInt();
+				
 				GoTrip.printline();
-					
-			switch(number) {
-				case 5:
-					System.out.println("<경상도 | 대구 | 울산 | 부산>");
-					break;
-				case 4:
-					System.out.println("<전라도 | 광주>");
-					break;
-				case 3:
-					System.out.println("<강원도>");
-					break;
-					
-				case 1:
+				
+				if(number == 1) {
 					System.out.println("<경기도 | 인천 | 서울>");
-					break;
-			
-				case 2:
+				} else if(number == 2) {
 					System.out.println("<충청도 | 세종 | 대전>");
-					break;
+				} else if(number == 3) {
+					System.out.println("<강원도>");
+				} else if(number == 4) {
+					System.out.println("<전라도 | 광주>");
+				} else if(number == 5) {
+					System.out.println("<경상도 | 대구 | 울산 | 부산>");
+				} else {
+					System.out.println("번호를 잘못입력하셨습니다");
 				}
 					
 					
