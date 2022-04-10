@@ -5,7 +5,18 @@ import java.util.Scanner;
 
 public class GoTrip {
 	
-	public void printlines() {
+	public static void menuList() {
+		System.out.println("===== ===== ===== ===== =====");
+		
+		System.out.println("<< 기능 창 >>");
+		System.out.println("1. 여행 경비 입력창");
+		System.out.println("2. 지역별 인기 추천 장소");
+		System.out.println("3. 인기있는 지역 10군데");
+		System.out.println("4. 검색한 지역 별 인기 시,군 추천");
+		System.out.println("5. 검색 내역");
+		System.out.println("6. 계절 선택에 따른 지역 추천");
+		System.out.println("7. 후기, 게시판");
+		
 		System.out.println("===== ===== ===== ===== =====");
 	}
 	
@@ -28,18 +39,8 @@ public class GoTrip {
 		
 		Scanner scanf = new Scanner(System.in);
 		
-		line.printlines();
+		GoTrip.menuList();
 		
-		System.out.println("<< 기능 창 >>");
-		System.out.println("1. 여행 경비 입력창");
-		System.out.println("2. 지역별 인기 추천 장소");
-		System.out.println("3. 인기있는 지역 10군데");
-		System.out.println("4. 검색한 지역 별 인기 시,군 추천");
-		System.out.println("5. 검색 내역");
-		System.out.println("6. 계절 선택에 따른 지역 추천");
-		System.out.println("7. 후기, 게시판");
-		
-		line.printlines();
 		System.out.println();
 		
 		System.out.print("원하시는 기능의 번호를 선택해주세요 -> ");
