@@ -32,34 +32,11 @@ public class GoTrip {
 		}
 	} 
 	
-	
-	public static void main(String[] args) {
+	public static void travelExpenses() {
 		Money money = new Money();
-		
-		
 		Scanner scanf = new Scanner(System.in);
 		
-		GoTrip.menuList();
-		
-		System.out.println();
-		
-		System.out.print("원하시는 기능의 번호를 선택해주세요 -> ");
-		int num = scanf.nextInt();
-		
-		System.out.println();
-		
-		switch(num) {
-		
-		// case 1 기능 : 여행 경비를 입력 할 수 있는 창
-		case 1:
-			// 1번을 누르면 여행 경비를 입력할 수 있는 기능 실행
-			// 해당하는 금액에 따라 여행지를 추천해준다
-			if(num == 1) {
-				
-			GoTrip.printline();
-			
-			// 반복문을 사용해서 금액이 맞지 않을 때 다시 재입력 할 수 있게 한다
-			while(true) {
+		while(true) {
 			System.out.print("금액 입력 -> ");
 			int inputMoney = scanf.nextInt();
 				
@@ -89,9 +66,38 @@ public class GoTrip {
 				
 			}
 			
-			}	
+			}
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Scanner scanf = new Scanner(System.in);
+		
+		
+		GoTrip.menuList();
+		
+		System.out.println();
+		
+		System.out.print("원하시는 기능의 번호를 선택해주세요 -> ");
+		int num = scanf.nextInt();
+		
+		System.out.println();
+		
+		switch(num) {
+		
+		// case 1 기능 : 여행 경비를 입력 할 수 있는 창
+		case 1:
+			// 1번을 누르면 여행 경비를 입력할 수 있는 기능 실행
+			// 해당하는 금액에 따라 여행지를 추천해준다
+			if(num == 1) {
+				
+			GoTrip.printline();
+			
+			// 반복문을 사용해서 금액이 맞지 않을 때 다시 재입력 할 수 있게 한다
+			GoTrip.travelExpenses();
 		}
-				break;
+			break;
 		// 여행 경비 입력 후 여행지 추천 종료
 		
 		// 지역별 인기 추천 장소 실행 
