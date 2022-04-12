@@ -187,6 +187,96 @@ public class GoTrip {
 		}
 	}
 	
+	public static void searchCityCountryDistrict() {
+		Scanner scanf = new Scanner(System.in);
+		
+		System.out.print("12개 지역 중 하나를 입력해주세요! -> ");
+		String wantRegion = scanf.next();
+			
+		GoTrip.printline();
+			
+		SearchRegion wantR1 = new SearchRegion("강원도");
+		SearchRegion wantR2 = new SearchRegion("경기도");
+		SearchRegion wantR3 = new SearchRegion("인천");
+		SearchRegion wantR4 = new SearchRegion("서울");
+		SearchRegion wantR5 = new SearchRegion("충청도");
+		SearchRegion wantR6 = new SearchRegion("대전");
+		SearchRegion wantR7 = new SearchRegion("경상도");
+		SearchRegion wantR8 = new SearchRegion("대구");
+		SearchRegion wantR9 = new SearchRegion("울산");
+		SearchRegion wantR10 = new SearchRegion("부산");
+		SearchRegion wantR11 = new SearchRegion("전라도");
+		SearchRegion wantR12 = new SearchRegion("광주");
+			
+		ArrayList<SearchRegion> sR = new ArrayList<>();
+		sR.add(wantR1);
+		sR.add(wantR2);
+		sR.add(wantR3);
+		sR.add(wantR4);
+		sR.add(wantR5);
+		sR.add(wantR6);
+		sR.add(wantR7);
+		sR.add(wantR8);
+		sR.add(wantR9);
+		sR.add(wantR10);
+		sR.add(wantR11);
+		sR.add(wantR12);
+			
+		for(SearchRegion wantRg: sR) {
+			String name = wantRg.getRegion();
+
+			if(name.equals("강원도") && wantRegion.equals("강원도")) {
+				System.out.println("동해, 평창, 강릉, 속초, 영주, 봉화");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("경기도") && wantRegion.equals("경기도")) {
+				System.out.println("수원, 시흥, 안성, 용인, 파주, 가평, 포천, 과천, 화성, 평택");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("인천") && wantRegion.equals("인천")) {
+				System.out.println("중구, 서구, 계양, 부평, 남동, 동구, 연수");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("서울") && wantRegion.equals("서울")) {
+				System.out.println("강동, 관악, 동대문, 강남, 영등포, 용산, 종로, 마포, 서초, 강북");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("충청도") && wantRegion.equals("충청도")) {
+				System.out.println("단양, 영월, 충주, 청주, 보령, 논산, 서산, 태안, 당진");
+				GoTrip.printline();
+				break;
+			}  else if(name.equals("대전") && wantRegion.equals("대전")) {
+				System.out.println("동구, 중구, 유성구, 대덕구, 서구");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("경상도") && wantRegion.equals("경상도")) {
+				System.out.println("안동, 영주, 경주, 통영, 거제, 하동, 창원, 남해, 사천, 진주");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("대구") && wantRegion.equals("대구")) {
+				System.out.println("동구, 남구, 수성구, 중구, 달성군, 달서구");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("울산") && wantRegion.equals("울산")) {
+				System.out.println("남구, 북구, 울주군, 중구, 동구");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("부산") && wantRegion.equals("부산")) {
+				System.out.println("해운대, 부산진, 강서, 사상, 동래구, 중구, 남구");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("전라도") && wantRegion.equals("전라도")) {
+				System.out.println("전주, 군산, 무주, 목포, 여수, 보성, 해남, 담양, 순천, 고창");
+				GoTrip.printline();
+				break;
+			} else if(name.equals("광주") && wantRegion.equals("광주")) {
+				System.out.println("광산구, 서구, 동구, 북구, 남구");
+				GoTrip.printline();
+				break;
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		Scanner scanf = new Scanner(System.in);
 		
@@ -226,101 +316,13 @@ public class GoTrip {
 			
 		// 검색한 지역 별 인기 시, 군 추천 기능창 실행
 		case 4:
-			System.out.print("12개 지역 중 하나를 입력해주세요! -> ");
-			String wantRegion = scanf.next();
-				
-			GoTrip.printline();
-				
-			SearchRegion wantR1 = new SearchRegion("강원도");
-			SearchRegion wantR2 = new SearchRegion("경기도");
-			SearchRegion wantR3 = new SearchRegion("인천");
-			SearchRegion wantR4 = new SearchRegion("서울");
-			SearchRegion wantR5 = new SearchRegion("충청도");
-			SearchRegion wantR6 = new SearchRegion("대전");
-			SearchRegion wantR7 = new SearchRegion("경상도");
-			SearchRegion wantR8 = new SearchRegion("대구");
-			SearchRegion wantR9 = new SearchRegion("울산");
-			SearchRegion wantR10 = new SearchRegion("부산");
-			SearchRegion wantR11 = new SearchRegion("전라도");
-			SearchRegion wantR12 = new SearchRegion("광주");
-				
-				
-			ArrayList<SearchRegion> sR = new ArrayList<>();
-			sR.add(wantR1);
-			sR.add(wantR2);
-			sR.add(wantR3);
-			sR.add(wantR4);
-			sR.add(wantR5);
-			sR.add(wantR6);
-			sR.add(wantR7);
-			sR.add(wantR8);
-			sR.add(wantR9);
-			sR.add(wantR10);
-			sR.add(wantR11);
-			sR.add(wantR12);
-				
-//				line.showSearchRegion(sR);
-				
-			for(SearchRegion wantRg: sR) {
-				String name = wantRg.getRegion();
-
-				if(name.equals("강원도") && wantRegion.equals("강원도")) {
-					System.out.println("동해, 평창, 강릉, 속초, 영주, 봉화");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("경기도") && wantRegion.equals("경기도")) {
-					System.out.println("수원, 시흥, 안성, 용인, 파주, 가평, 포천, 과천, 화성, 평택");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("인천") && wantRegion.equals("인천")) {
-					System.out.println("중구, 서구, 계양, 부평, 남동, 동구, 연수");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("서울") && wantRegion.equals("서울")) {
-					System.out.println("강동, 관악, 동대문, 강남, 영등포, 용산, 종로, 마포, 서초, 강북");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("충청도") && wantRegion.equals("충청도")) {
-					System.out.println("단양, 영월, 충주, 청주, 보령, 논산, 서산, 태안, 당진");
-					GoTrip.printline();
-					break;
-				}  else if(name.equals("대전") && wantRegion.equals("대전")) {
-					System.out.println("동구, 중구, 유성구, 대덕구, 서구");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("경상도") && wantRegion.equals("경상도")) {
-					System.out.println("안동, 영주, 경주, 통영, 거제, 하동, 창원, 남해, 사천, 진주");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("대구") && wantRegion.equals("대구")) {
-					System.out.println("동구, 남구, 수성구, 중구, 달성군, 달서구");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("울산") && wantRegion.equals("울산")) {
-					System.out.println("남구, 북구, 울주군, 중구, 동구");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("부산") && wantRegion.equals("부산")) {
-					System.out.println("해운대, 부산진, 강서, 사상, 동래구, 중구, 남구");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("전라도") && wantRegion.equals("전라도")) {
-					System.out.println("전주, 군산, 무주, 목포, 여수, 보성, 해남, 담양, 순천, 고창");
-					GoTrip.printline();
-					break;
-				} else if(name.equals("광주") && wantRegion.equals("광주")) {
-					System.out.println("광산구, 서구, 동구, 북구, 남구");
-					GoTrip.printline();
-					break;
-				}
-					
-				
-			}
+			GoTrip.searchCityCountryDistrict();
 			break;
 		// // 검색한 지역 별 인기 시, 군 추천 기능창 종료
 		
 		// 검색 내역 실행 (기능 보류)
 		case 5: 
+			
 			break;
 		// 검색 내역 종료
 			
