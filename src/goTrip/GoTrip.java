@@ -65,10 +65,91 @@ public class GoTrip {
 				continue;
 				
 			}
-			
-			}
+		}
 	}
 	
+	public static void popularPlaceOfRegion() {
+		Scanner scanf = new Scanner(System.in);
+		ArrayList<String> firstRegion = new ArrayList<>();
+		firstRegion.add("경기도 -> 에버랜드, 한국민속촌, 쁘띠프랑스");
+		firstRegion.add("인천 -> 을왕리 해수욕장, 송도 센트럴파크, 인천 대공원");
+		firstRegion.add("서울 -> 복촌 한옥마을, 올림픽 공원, 낙산공원");
+				
+		ArrayList<String> secondRegion = new ArrayList<>();
+		secondRegion.add("충청도 -> 꽂지 해수욕장, 남당항, 아산지중해");
+		secondRegion.add("세종 -> 세종 호수공원, 국립세종수목원, 베어트리파크");
+		secondRegion.add("대전 -> 국립중앙과학관, 대전아쿠아리움, 대전오월드");
+			
+		ArrayList<String> thirdRegion = new ArrayList<>();
+		thirdRegion.add("강원도 -> 대관령 양떼 목장, 남이섬, 하슬라 아트월드");
+				
+		ArrayList<String> fourthRegion = new ArrayList<>();
+		fourthRegion.add("경상도 -> 동피랑 벽화마을, 바람의 언덕, 매미성");
+		fourthRegion.add("대구 -> 이월드, 83타워, 국립대구과학관");
+		fourthRegion.add("울산 -> 대왕암 공원, 간절곶, 신화마을");
+		fourthRegion.add("부산 -> 감천문화마을, 광안리해수욕장, 국립광주박물관");
+				
+		ArrayList<String> fifthRegion = new ArrayList<>();
+		fifthRegion.add("전라도 -> 순천만 국가공원, 낙안읍성민속마을, 대흥사");
+		fifthRegion.add("광주 -> 펭귄마을, 국립광주과학관, 국립광주박물관");
+			
+		GoTrip.printline();
+			
+		System.out.println("1. 경기도 | 인천 | 서울");
+		System.out.println("2. 충청도 | 세종 | 대전");
+		System.out.println("3. 강원도");
+		System.out.println("4. 전라도 | 광주");
+		System.out.println("5. 경상도 | 대구 | 울산 | 부산");
+			
+		GoTrip.printline();
+				
+		System.out.print("알고싶은 지역의 번호 선택해주세요 -> ");
+		int number = scanf.nextInt();
+			
+		GoTrip.printline();
+			
+		if(number == 1) {
+			System.out.println("<경기도 | 인천 | 서울>");
+		} else if(number == 2) {
+			System.out.println("<충청도 | 세종 | 대전>");
+		} else if(number == 3) {
+			System.out.println("<강원도>");
+		} else if(number == 4) {
+			System.out.println("<전라도 | 광주>");
+		} else if(number == 5) {
+			System.out.println("<경상도 | 대구 | 울산 | 부산>");
+		} else {
+			System.out.println("번호를 잘못입력하셨습니다");
+		}
+				
+				
+		if(number == 1) {
+			for(int i=0; i<firstRegion.size(); i++) {
+				String fR = firstRegion.get(i);
+				System.out.println((i + 1) + ". " + fR);
+			}
+		} else if(number == 2) {
+			for(int i=0; i<secondRegion.size(); i++) {
+				String sR = secondRegion.get(i);
+				System.out.println((i + 1) + ". " + sR);
+			}
+		} else if(number == 3) {
+			for(int i=0; i<thirdRegion.size(); i++) {
+				String tR = thirdRegion.get(i);
+				System.out.println((i + 1) + ". " + tR);
+			} 
+		} else if(number == 4) {
+			for(int i=0; i<fourthRegion.size(); i++) {
+				String foR = fourthRegion.get(i);
+				System.out.println((i + 1) + ". " + foR);
+			} 
+		} else if(number == 5) {
+			for(int i=0; i<fifthRegion.size(); i++) {
+				String fiR = fifthRegion.get(i);
+				System.out.println((i + 1) + ". " + fiR);
+			} 
+		}		
+	}
 	
 	public static void main(String[] args) {
 		
@@ -88,7 +169,6 @@ public class GoTrip {
 		
 		// case 1 기능 : 여행 경비를 입력 할 수 있는 창
 		case 1:
-			// 1번을 누르면 여행 경비를 입력할 수 있는 기능 실행
 			// 해당하는 금액에 따라 여행지를 추천해준다
 			GoTrip.printline();
 			
@@ -99,86 +179,10 @@ public class GoTrip {
 		
 		// 지역별 인기 추천 장소 실행 
 		case 2:
-			ArrayList<String> firstRegion = new ArrayList<>();
-			firstRegion.add("경기도 -> 에버랜드, 한국민속촌, 쁘띠프랑스");
-			firstRegion.add("인천 -> 을왕리 해수욕장, 송도 센트럴파크, 인천 대공원");
-			firstRegion.add("서울 -> 복촌 한옥마을, 올림픽 공원, 낙산공원");
-					
-			ArrayList<String> secondRegion = new ArrayList<>();
-			secondRegion.add("충청도 -> 꽂지 해수욕장, 남당항, 아산지중해");
-			secondRegion.add("세종 -> 세종 호수공원, 국립세종수목원, 베어트리파크");
-			secondRegion.add("대전 -> 국립중앙과학관, 대전아쿠아리움, 대전오월드");
-				
-			ArrayList<String> thirdRegion = new ArrayList<>();
-			thirdRegion.add("강원도 -> 대관령 양떼 목장, 남이섬, 하슬라 아트월드");
-					
-			ArrayList<String> fourthRegion = new ArrayList<>();
-			fourthRegion.add("경상도 -> 동피랑 벽화마을, 바람의 언덕, 매미성");
-			fourthRegion.add("대구 -> 이월드, 83타워, 국립대구과학관");
-			fourthRegion.add("울산 -> 대왕암 공원, 간절곶, 신화마을");
-			fourthRegion.add("부산 -> 감천문화마을, 광안리해수욕장, 국립광주박물관");
-					
-			ArrayList<String> fifthRegion = new ArrayList<>();
-			fifthRegion.add("전라도 -> 순천만 국가공원, 낙안읍성민속마을, 대흥사");
-			fifthRegion.add("광주 -> 펭귄마을, 국립광주과학관, 국립광주박물관");
-				
-			GoTrip.printline();
-				
-			System.out.println("1. 경기도 | 인천 | 서울");
-			System.out.println("2. 충청도 | 세종 | 대전");
-			System.out.println("3. 강원도");
-			System.out.println("4. 전라도 | 광주");
-			System.out.println("5. 경상도 | 대구 | 울산 | 부산");
-				
-			GoTrip.printline();
-					
-			System.out.print("알고싶은 지역의 번호 선택해주세요 -> ");
-			int number = scanf.nextInt();
-				
-			GoTrip.printline();
-				
-			if(number == 1) {
-				System.out.println("<경기도 | 인천 | 서울>");
-			} else if(number == 2) {
-				System.out.println("<충청도 | 세종 | 대전>");
-			} else if(number == 3) {
-				System.out.println("<강원도>");
-			} else if(number == 4) {
-				System.out.println("<전라도 | 광주>");
-			} else if(number == 5) {
-				System.out.println("<경상도 | 대구 | 울산 | 부산>");
-			} else {
-				System.out.println("번호를 잘못입력하셨습니다");
-			}
-					
-					
-			if(number == 1) {
-				for(int i=0; i<firstRegion.size(); i++) {
-					String fR = firstRegion.get(i);
-					System.out.println((i + 1) + ". " + fR);
-				}
-			} else if(number == 2) {
-				for(int i=0; i<secondRegion.size(); i++) {
-					String sR = secondRegion.get(i);
-					System.out.println((i + 1) + ". " + sR);
-				}
-			} else if(number == 3) {
-				for(int i=0; i<thirdRegion.size(); i++) {
-					String tR = thirdRegion.get(i);
-					System.out.println((i + 1) + ". " + tR);
-				} 
-			} else if(number == 4) {
-				for(int i=0; i<fourthRegion.size(); i++) {
-					String foR = fourthRegion.get(i);
-					System.out.println((i + 1) + ". " + foR);
-				} 
-			} else if(number == 5) {
-				for(int i=0; i<fifthRegion.size(); i++) {
-					String fiR = fifthRegion.get(i);
-					System.out.println((i + 1) + ". " + fiR);
-				} 
-			}		
+			GoTrip.popularPlaceOfRegion();
 			break;
+		// 지역별 인기 추천 장소 실행 종료
+			
 		// 인기있는 10군데 지역 추천 실행	
 		case 3:
 			Region region1 = new Region("부산");
