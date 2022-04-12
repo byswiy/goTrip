@@ -36,6 +36,7 @@ public class GoTrip {
 		Money money = new Money();
 		Scanner scanf = new Scanner(System.in);
 		
+		// 반복문을 사용해서 금액이 맞지 않을 때 다시 재입력 할 수 있게 한다
 		while(true) {
 			System.out.print("금액 입력 -> ");
 			int inputMoney = scanf.nextInt();
@@ -151,10 +152,43 @@ public class GoTrip {
 		}		
 	}
 	
-	public static void main(String[] args) {
-		
+	public static void popularPlaceTop10() {
 		Scanner scanf = new Scanner(System.in);
 		
+		Region region1 = new Region("부산");
+		Region region2 = new Region("남해");
+		Region region3 = new Region("삼척");
+		Region region4 = new Region("서울");
+		Region region5 = new Region("전주");
+		Region region6 = new Region("공주");
+		Region region7 = new Region("순천");
+		Region region8 = new Region("인천");
+		Region region9 = new Region("제주도");
+		Region region10 = new Region("안동");
+			
+			
+		ArrayList<Region> recommendRegion= new ArrayList<>();
+		recommendRegion.add(region1);
+		recommendRegion.add(region2);
+		recommendRegion.add(region3);
+		recommendRegion.add(region4);
+		recommendRegion.add(region5);
+		recommendRegion.add(region6);
+		recommendRegion.add(region7);
+		recommendRegion.add(region8);
+		recommendRegion.add(region9);
+		recommendRegion.add(region10);
+			
+		GoTrip.printline();
+		System.out.println("<< 추천 top 10 >>");
+			
+		for(int i=0; i<recommendRegion.size(); i++) {
+			System.out.println("•" + recommendRegion.get(i));
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner scanf = new Scanner(System.in);
 		
 		GoTrip.menuList();
 		
@@ -172,7 +206,6 @@ public class GoTrip {
 			// 해당하는 금액에 따라 여행지를 추천해준다
 			GoTrip.printline();
 			
-			// 반복문을 사용해서 금액이 맞지 않을 때 다시 재입력 할 수 있게 한다
 			GoTrip.travelExpenses();
 			break;
 		// 여행 경비 입력 후 여행지 추천 종료
@@ -183,38 +216,9 @@ public class GoTrip {
 			break;
 		// 지역별 인기 추천 장소 실행 종료
 			
-		// 인기있는 10군데 지역 추천 실행	
+		// 인기있는 10군데
 		case 3:
-			Region region1 = new Region("부산");
-			Region region2 = new Region("남해");
-			Region region3 = new Region("삼척");
-			Region region4 = new Region("서울");
-			Region region5 = new Region("전주");
-			Region region6 = new Region("공주");
-			Region region7 = new Region("순천");
-			Region region8 = new Region("인천");
-			Region region9 = new Region("제주도");
-			Region region10 = new Region("안동");
-				
-				
-			ArrayList<Region> recommendRegion= new ArrayList<>();
-			recommendRegion.add(region1);
-			recommendRegion.add(region2);
-			recommendRegion.add(region3);
-			recommendRegion.add(region4);
-			recommendRegion.add(region5);
-			recommendRegion.add(region6);
-			recommendRegion.add(region7);
-			recommendRegion.add(region8);
-			recommendRegion.add(region9);
-			recommendRegion.add(region10);
-				
-			GoTrip.printline();
-			System.out.println("<< 추천 top 10 >>");
-				
-			for(int i=0; i<recommendRegion.size(); i++) {
-				System.out.println("•" + recommendRegion.get(i));
-			}
+			GoTrip.popularPlaceTop10();
 				
 			GoTrip.printline();
 			break;
