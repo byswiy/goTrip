@@ -71,6 +71,7 @@ public class GoTrip {
 	
 	public static void popularPlaceOfRegion() {
 		Scanner scanf = new Scanner(System.in);
+		
 		ArrayList<String> firstRegion = new ArrayList<>();
 		firstRegion.add("경기도 -> 에버랜드, 한국민속촌, 쁘띠프랑스");
 		firstRegion.add("인천 -> 을왕리 해수욕장, 송도 센트럴파크, 인천 대공원");
@@ -277,6 +278,32 @@ public class GoTrip {
 		}
 	}
 	
+	public static void searchSeason() {
+		Scanner scanf = new Scanner(System.in);
+		
+		Season ss = new Season();
+		
+		GoTrip.printline();
+
+		System.out.println("계절별 추천 여행지");
+		System.out.print("계절 : ");
+		String season = scanf.next();
+			
+		GoTrip.printline();
+			
+		System.out.println("<< " + season + " 추천 여행지 >>");
+			
+		if(season.equals("봄")) {
+			ss.spring();
+		} else if(season.equals("여름")) {
+			ss.summer();
+		} else if(season.equals("가을")) {
+			ss.autumn();
+		} else if(season.equals("겨울")) {
+			ss.winter();
+		}
+	}
+	
 	public static void main(String[] args) {
 		Scanner scanf = new Scanner(System.in);
 		
@@ -328,33 +355,14 @@ public class GoTrip {
 			
 		// 계절별 나라 추천 기능창 실행
 		case 6:
-			Season ss = new Season();
-				
-			GoTrip.printline();
-
-			System.out.println("계절별 추천 여행지");
-			System.out.print("계절 : ");
-			String season = scanf.next();
-				
-			GoTrip.printline();
-				
-			System.out.println("<< " + season + " 추천 여행지 >>");
-				
-			if(season.equals("봄")) {
-				ss.spring();
-			} else if(season.equals("여름")) {
-				ss.summer();
-			} else if(season.equals("가을")) {
-				ss.autumn();
-			} else if(season.equals("겨울")) {
-				ss.winter();
-			}
+			GoTrip.searchSeason();
 			break;
 		
 		// 계절 별 추천 지역 기능창 종료
 			
 		// 후기 창 실행 (기능 보류)
 		case 7:
+			
 			break;
 		
 		// 후기 창 종료
