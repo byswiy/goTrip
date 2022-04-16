@@ -32,7 +32,7 @@ public class GoTrip {
 		}
 	} 
 	
-	public static void travelExpenses() {
+	public static void travelExpensesInput() {
 		Money money = new Money();
 		Scanner scanf = new Scanner(System.in);
 		
@@ -319,22 +319,22 @@ public class GoTrip {
 		switch(num) {
 		
 		// case 1 기능 : 여행 경비를 입력 할 수 있는 창
-		case 1:
+		case MenuNumber.travelExpensesInput:
 			// 해당하는 금액에 따라 여행지를 추천해준다
 			GoTrip.printline();
 			
-			GoTrip.travelExpenses();
+			GoTrip.travelExpensesInput();
 			break;
 		// 여행 경비 입력 후 여행지 추천 종료
 		
 		// 지역별 인기 추천 장소 실행 
-		case 2:
+		case MenuNumber.popularPlaceOfRegion:
 			GoTrip.popularPlaceOfRegion();
 			break;
 		// 지역별 인기 추천 장소 실행 종료
 			
 		// 인기있는 10군데
-		case 3:
+		case MenuNumber.popularPlaceTop10:
 			GoTrip.popularPlaceTop10();
 				
 			GoTrip.printline();
@@ -342,60 +342,28 @@ public class GoTrip {
 		// 인기있는 10군데 지역 추천 종료
 			
 		// 검색한 지역 별 인기 시, 군 추천 기능창 실행
-		case 4:
+		case MenuNumber.searchCityCountryDistrict:
 			GoTrip.searchCityCountryDistrict();
 			break;
 		// // 검색한 지역 별 인기 시, 군 추천 기능창 종료
 		
 		// 검색 내역 실행 (기능 보류)
-		case 5: 
-			
+		case MenuNumber.searchHistory: 
 			break;
 		// 검색 내역 종료
 			
 		// 계절별 나라 추천 기능창 실행
-		case 6:
+		case MenuNumber.searchSeason:
 			GoTrip.searchSeason();
 			break;
 		
 		// 계절 별 추천 지역 기능창 종료
 			
 		// 후기 창 실행 (기능 보류)
-		case 7:
-			
+		case MenuNumber.review:
 			break;
 		
 		// 후기 창 종료
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		}
 	}	
