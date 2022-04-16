@@ -188,14 +188,14 @@ public class GoTrip {
 		}
 	}
 	
-	public static void searchCityCountryDistrict() {
+	public static String searchCityCountryDistrict() {
 		Scanner scanf = new Scanner(System.in);
 		
 		System.out.print("12개 지역 중 하나를 입력해주세요! -> ");
 		String wantRegion = scanf.next();
 			
 		GoTrip.printline();
-			
+				
 		SearchRegion wantR1 = new SearchRegion("강원도");
 		SearchRegion wantR2 = new SearchRegion("경기도");
 		SearchRegion wantR3 = new SearchRegion("인천");
@@ -208,7 +208,7 @@ public class GoTrip {
 		SearchRegion wantR10 = new SearchRegion("부산");
 		SearchRegion wantR11 = new SearchRegion("전라도");
 		SearchRegion wantR12 = new SearchRegion("광주");
-			
+				
 		ArrayList<SearchRegion> sR = new ArrayList<>();
 		sR.add(wantR1);
 		sR.add(wantR2);
@@ -222,7 +222,7 @@ public class GoTrip {
 		sR.add(wantR10);
 		sR.add(wantR11);
 		sR.add(wantR12);
-			
+				
 		for(SearchRegion wantRg: sR) {
 			String name = wantRg.getRegion();
 
@@ -274,8 +274,13 @@ public class GoTrip {
 				System.out.println("광산구, 서구, 동구, 북구, 남구");
 				GoTrip.printline();
 				break;
-			}
-		}
+			} // end if
+		} // end for
+		return wantRegion;
+	}
+	
+	public static void searchHistory() {
+		
 	}
 	
 	public static void searchSeason() {
@@ -343,12 +348,24 @@ public class GoTrip {
 			
 		// 검색한 지역 별 인기 시, 군 추천 기능창 실행
 		case MenuNumber.searchCityCountryDistrict:
-			GoTrip.searchCityCountryDistrict();
+			boolean isRunning = true;
+			
+			while(isRunning) {
+				GoTrip.searchCityCountryDistrict();
+				
+				System.out.println("검색을 계속 하시겠습니까? (y / n)");
+				char answer = scanf.next().charAt(0);
+				
+				if(answer == 'n') {
+					isRunning = false;
+				}
+			}
 			break;
 		// // 검색한 지역 별 인기 시, 군 추천 기능창 종료
 		
 		// 검색 내역 실행 (기능 보류)
 		case MenuNumber.searchHistory: 
+			
 			break;
 		// 검색 내역 종료
 			
