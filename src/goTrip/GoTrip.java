@@ -190,7 +190,7 @@ public class GoTrip {
 		}
 	}
 	
-	public static String searchCityCountryDistrict() {
+	public static void searchCityCountryDistrict() {
 		String wantRegion = null;
 		
 		Scanner scanf = new Scanner(System.in);
@@ -280,26 +280,8 @@ public class GoTrip {
 				break;
 			} // end if
 		} // end for
-		return wantRegion;
 	}
 	
-	public static void searchAdd() {
-		String wantRegion = searchCityCountryDistrict();
-		
-		System.out.println(wantRegion);
-//		
-//		SearchHistory search = new SearchHistory(wantRegion);
-//		
-//		Set<SearchHistory> history = new HashSet<>();
-//		history.add(search);
-		
-	}
-	
-//	public static void searchHistory() {
-//		List<SearchHistory> history = searchAdd();
-//		System.out.println(history);
-//		
-//	}
 	
 	public static void searchSeason() {
 		Scanner scanf = new Scanner(System.in);
@@ -374,7 +356,7 @@ public class GoTrip {
 				System.out.println("검색을 계속 하시겠습니까? (y / n)");
 				char answer = scanf.next().charAt(0);
 				
-				if(answer == 'n') {
+				if(answer == 'n' || answer == 'N') {
 					isRunning = false;
 					break;
 				}
