@@ -5,28 +5,28 @@ import java.util.Scanner;
 public class SeasonChoice {
 
 	public static void main(String[] args) {
-		// ±â´É : °èÀı ¼±ÅÃ ÈÄ ÃßÃµµÇ´Â ¿©ÇàÁö
+		// ê¸°ëŠ¥ : ê³„ì ˆ ì„ íƒ í›„ ì¶”ì²œë˜ëŠ” ì—¬í–‰ì§€
 		Season ss = new Season();
 		
 		SeasonChoice line = new SeasonChoice();
 		
 		Scanner scanf = new Scanner(System.in);
 
-		System.out.println("°èÀıº° ÃßÃµ ¿©ÇàÁö");
-		System.out.print("°èÀı : ");
+		System.out.println("ê³„ì ˆë³„ ì¶”ì²œ ì—¬í–‰ì§€");
+		System.out.print("ê³„ì ˆ : ");
 		String season = scanf.next();
 		
 		System.out.println("===== ===== ===== ===== =====");
 		
-		System.out.println("<< " + season + " ÃßÃµ ¿©ÇàÁö >>");
+		System.out.println("<< " + season + " ì¶”ì²œ ì—¬í–‰ì§€ >>");
 		
-		if(season.equals("º½")) {
+		if(season.equals("ë´„")) {
 			ss.spring();
-		} else if(season.equals("¿©¸§")) {
+		} else if(season.equals("ì—¬ë¦„")) {
 			ss.summer();
-		} else if(season.equals("°¡À»")) {
+		} else if(season.equals("ê°€ì„")) {
 			ss.autumn();
-		} else if(season.equals("°Ü¿ï")) {
+		} else if(season.equals("ê²¨ìš¸")) {
 			ss.winter();
 		}
 		

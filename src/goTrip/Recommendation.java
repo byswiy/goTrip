@@ -5,17 +5,17 @@ import java.util.ArrayList;
 public class Recommendation {
 
 	public static void main(String[] args) {
-		// ±â´É : ÃßÃµ top10
-		Region region1 = new Region("Á¦ÁÖ");
-		Region region2 = new Region("ºÎ»ê");
-		Region region3 = new Region("ÀüÁÖ");
-		Region region4 = new Region("¼­¿ï");
-		Region region5 = new Region("°æÁÖ");
-		Region region6 = new Region("ÀÎÃµ");
-		Region region7 = new Region("°­¸ª");
-		Region region8 = new Region("¼ÓÃÊ");
-		Region region9 = new Region("´ë±¸");
-		Region region10 = new Region("¿©¼ö");
+		// ï¿½ï¿½ï¿½ : ï¿½ï¿½Ãµ top10
+		Region region1 = new Region("ì œì£¼");
+		Region region2 = new Region("ë¶€ì‚°");
+		Region region3 = new Region("ì „ì£¼");
+		Region region4 = new Region("ì„œìš¸");
+		Region region5 = new Region("ê²½ì£¼");
+		Region region6 = new Region("ì¸ì²œ");
+		Region region7 = new Region("ê°•ë¦‰");
+		Region region8 = new Region("ì†ì´ˆ");
+		Region region9 = new Region("ëŒ€êµ¬");
+		Region region10 = new Region("ì—¬ìˆ˜");
 		
 		
 		ArrayList<Region> recommendCountry = new ArrayList<>();
@@ -31,7 +31,7 @@ public class Recommendation {
 		recommendCountry.add(region10);
 		
 		System.out.println("===== ===== ===== ===== =====");
-		System.out.println("<< ÃßÃµ top 10 >>");
+		System.out.println("<< ì¶”ì²œ top 10 >>");
 		
 		for(int i=0; i<recommendCountry.size(); i++) {
 			System.out.println((i + 1) + ". " + recommendCountry.get(i));

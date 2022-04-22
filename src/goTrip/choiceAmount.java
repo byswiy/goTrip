@@ -3,7 +3,7 @@ package goTrip;
 public class choiceAmount {
 
 	public static void main(String[] args) {
-		// ±â´É : ÃßÃµÇÏ´Â ¿©Çà °æºñ ±Ý¾×´ë
+		// ê¸°ëŠ¥ : ì¶”ì²œí•˜ëŠ” ì—¬í–‰ ê²½ë¹„ ê¸ˆì•¡ëŒ€
 
 		System.out.print("~ 500,000\t |");
 		System.out.print("\t500,000 ~ 1,000,000\t |");

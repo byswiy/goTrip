@@ -1,7 +1,9 @@
 package goTrip;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class GoTrip {
 	
@@ -189,11 +191,13 @@ public class GoTrip {
 	}
 	
 	public static String searchCityCountryDistrict() {
+		String wantRegion = null;
+		
 		Scanner scanf = new Scanner(System.in);
 		
 		System.out.print("12개 지역 중 하나를 입력해주세요! -> ");
-		String wantRegion = scanf.next();
-			
+		wantRegion = scanf.next();
+		
 		GoTrip.printline();
 				
 		SearchRegion wantR1 = new SearchRegion("강원도");
@@ -279,9 +283,23 @@ public class GoTrip {
 		return wantRegion;
 	}
 	
-	public static void searchHistory() {
+	public static void searchAdd() {
+		String wantRegion = searchCityCountryDistrict();
+		
+		System.out.println(wantRegion);
+//		
+//		SearchHistory search = new SearchHistory(wantRegion);
+//		
+//		Set<SearchHistory> history = new HashSet<>();
+//		history.add(search);
 		
 	}
+	
+//	public static void searchHistory() {
+//		List<SearchHistory> history = searchAdd();
+//		System.out.println(history);
+//		
+//	}
 	
 	public static void searchSeason() {
 		Scanner scanf = new Scanner(System.in);
@@ -358,6 +376,7 @@ public class GoTrip {
 				
 				if(answer == 'n') {
 					isRunning = false;
+					break;
 				}
 			}
 			break;
@@ -365,7 +384,7 @@ public class GoTrip {
 		
 		// 검색 내역 실행 (기능 보류)
 		case MenuNumber.searchHistory: 
-			
+			System.out.println("case 실행");
 			break;
 		// 검색 내역 종료
 			
@@ -373,7 +392,6 @@ public class GoTrip {
 		case MenuNumber.searchSeason:
 			GoTrip.searchSeason();
 			break;
-		
 		// 계절 별 추천 지역 기능창 종료
 			
 		// 후기 창 실행 (기능 보류)

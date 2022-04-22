@@ -9,27 +9,27 @@ public class Search {
 	}
 
 	public static void main(String[] args) {
-		// ±â´É : ¿©Çà °æºñ ÀÔ·Â Ã¢
+		// ê¸°ëŠ¥ : ì—¬í–‰ ê²½ë¹„ ì…ë ¥ ì°½
 		
 		Search line = new Search();
 		
 		Scanner scanf = new Scanner(System.in);
 		
 		line.printLines();
-		System.out.println("ÃÖ¼Ò 30¸¸¿ø¿¡¼­ ÃÖ´ë 300¸¸¿øÀ¸·Î ÀÔ·Â ÇØ¾ßÇÕ´Ï´Ù");
+		System.out.println("ìµœì†Œ 30ë§Œì›ì—ì„œ ìµœëŒ€ 300ë§Œì›ìœ¼ë¡œ ì…ë ¥ í•´ì•¼í•©ë‹ˆë‹¤");
 		
-		System.out.print("ÃÖ¼Ò±İ¾× ÀÔ·Â -> ");
+		System.out.print("ìµœì†Œê¸ˆì•¡ ì…ë ¥ -> ");
 		int minAmount = scanf.nextInt();
 		
-		System.out.print("ÃÖ´ë±İ¾× ÀÔ·Â -> ");
+		System.out.print("ìµœëŒ€ê¸ˆì•¡ ì…ë ¥ -> ");
 		int maxAmount = scanf.nextInt();
 		
 		if(minAmount < 300000) {
 			line.printLines();
-			System.out.println("ÃÖ¼Ò±İ¾×ÀÌ ¸ÂÁö ¾Ê½À´Ï´Ù");
+			System.out.println("ìµœì†Œê¸ˆì•¡ì´ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤");
 		} else if(maxAmount > 3000000) {
 			line.printLines();
-			System.out.println("¬‚´ë±İ¾×ÀÌ ¸ÂÁö ¾Ê½À´Ï´Ù");
+			System.out.println("ìµ€ëŒ€ê¸ˆì•¡ì´ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤");
 		} 
 		
 

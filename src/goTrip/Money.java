@@ -3,28 +3,28 @@ package goTrip;
 public class Money {
 
 	public void lessThan10() {
-		System.out.println("µ¿ÇØ, ÆòÃ¢, °­¸ª, ´Ü¾ç, ¿µ¿ù");
-		System.out.println("ÀüÁÖ, ±º»ê, °íÃ¢, ¹«ÁÖ, ´ã¾ç");
-		System.out.println("±¤¾ç, ¸ñÆ÷, ±¤ÁÖ, ¾Èµ¿, ¿µÁÖ");
-		System.out.println("´ë±¸, Åë¿µ, °ÅÁ¦, ÇÏµ¿, ¿ï»ê");
+		System.out.println("ë™í•´, í‰ì°½, ê°•ë¦‰, ë‹¨ì–‘, ì˜ì›”");
+		System.out.println("ì „ì£¼, êµ°ì‚°, ê³ ì°½, ë¬´ì£¼, ë‹´ì–‘");
+		System.out.println("ê´‘ì–‘, ëª©í¬, ê´‘ì£¼, ì•ˆë™, ì˜ì£¼");
+		System.out.println("ëŒ€êµ¬, í†µì˜, ê±°ì œ, í•˜ë™, ìš¸ì‚°");
 	}
 	
 	public void more10OrlessThan20() {
 		lessThan10();
-		System.out.println("¼­¿ï, ÀÎÃµ, ¼ÓÃÊ, ¼ö¿ø, ½ÃÈï");
-		System.out.println("¼øÃµ, ¿©¼ö, º¸¼º, °íÈï, °æÁÖ");
-		System.out.println("ºÎ»ê Ã¢¿ø, ³²ÇØ");
+		System.out.println("ì„œìš¸, ì¸ì²œ, ì†ì´ˆ, ìˆ˜ì›, ì‹œí¥");
+		System.out.println("ìˆœì²œ, ì—¬ìˆ˜, ë³´ì„±, ê³ í¥, ê²½ì£¼");
+		System.out.println("ë¶€ì‚° ì°½ì›, ë‚¨í•´");
 	}
 	
 	public void more20OrlessThan30() {
 		more10OrlessThan20();
-		System.out.println("°î¼º, ÀüÁÖ, ±¸·Ê, ¼øÃ¢, ÀåÀV");
-		System.out.println("¿µ±¤, ÇØ³², ºÀÈ­, »çÃµ");
+		System.out.println("ê³¡ì„±, ì „ì£¼, êµ¬ë¡€, ìˆœì°½, ì¥í”™");
+		System.out.println("ì˜ê´‘, í•´ë‚¨, ë´‰í™”, ì‚¬ì²œ");
 	}
 	
 	public void more30OrlessThan40() {
 		more20OrlessThan30();
-		System.out.println("¿ëÀÎ, ºÎ¾È, º¸·É, Á¦ÁÖ");
+		System.out.println("ìš©ì¸, ë¶€ì•ˆ, ë³´ë ¹, ì œì£¼");
 	}
 
 }
